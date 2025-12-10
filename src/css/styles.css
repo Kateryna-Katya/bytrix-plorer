@@ -894,3 +894,107 @@ h6 {
     color: var(--color-text);
     text-decoration: underline;
 }
+/* --- LEGAL PAGES STYLES --- */
+
+/* Контейнер для текста */
+.legal-page {
+    padding-top: calc(var(--header-height) + 40px);
+    min-height: 100vh;
+}
+
+.legal-content {
+    background: var(--color-surface);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    max-width: 900px;
+    margin: 0 auto;
+    /* Центрируем документ */
+}
+
+/* Типографика внутри документа */
+.legal-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.legal-content p {
+    color: #94A3B8;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.lead-text {
+    font-size: 1.1rem !important;
+    color: var(--color-text) !important;
+}
+
+.legal-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+/* Списки */
+.legal-list {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.legal-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: #94A3B8;
+    line-height: 1.6;
+}
+
+.legal-list li::before {
+    content: '•';
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.legal-list strong {
+    color: var(--color-text);
+}
+
+/* Ссылки */
+.link-accent {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.link-accent:hover {
+    color: #fff;
+}
+
+/* Кнопка в хедере (маленькая) */
+.btn--sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+/* Адаптив для документа */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 24px;
+    }
+
+    .legal-title {
+        font-size: 1.6rem;
+    }
+}
